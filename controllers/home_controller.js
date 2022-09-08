@@ -3,5 +3,5 @@ module.exports.home = function (req, res) {
 };
 
 module.exports.contact = function (req, res) {
-  return res.end("<h1>contact page ! </h1>");
+  return res.end("<h1>this is contact page</h1>");
 };
