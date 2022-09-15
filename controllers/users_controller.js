@@ -1,9 +1,11 @@
-module.exports.users = function (req, res) {
-  return res.render("user", {
-    title: "Users",
+module.exports.register = function (req, res) {
+  return res.render("register", {
+    title: "reagister user",
   });
 };
 
-module.exports.newusers = function (req, res) {
-  return res.end("<h1>added new user</h1>");
+module.exports.login = function (req, res) {
+  return res.render("login", {
+    title: "login",
+  });
 };
