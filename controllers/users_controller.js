@@ -1,5 +1,7 @@
 module.exports.users = function (req, res) {
-  return res.end("<h1>this is user route</h1>");
+  return res.render("user", {
+    title: "Users",
+  });
 };
 
 module.exports.newusers = function (req, res) {

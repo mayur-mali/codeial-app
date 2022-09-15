@@ -1,7 +1,9 @@
 module.exports.home = function (req, res) {
-  return res.end("<h1>Hello world ! </h1>");
+  return res.render("home", {
+    title: "Home",
+  });
 };
 
-module.exports.contact = function (req, res) {
-  return res.end("<h1>this is contact page</h1>");
+module.exports.home1 = function (req, res) {
+  return res.redirect("/check");
 };
