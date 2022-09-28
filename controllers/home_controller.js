@@ -1,6 +1,15 @@
+const Post = require("../models/post");
+
 module.exports.home = function (req, res) {
-  return res.render("home", {
-    title: "Home",
+  Post.find({}, function (err, post) {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    return res.render("home", {
+      post: post,
+      title: "Home",
+    });
   });
 };
 
