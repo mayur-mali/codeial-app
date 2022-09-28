@@ -1,18 +1,24 @@
 const User = require("../models/user");
 
-// module.exports.profile = function (req, res) {
-//   return res.render("register", {
-//     title: "reagister user",
-//   });
-// };
+module.exports.profile = function (req, res) {
+  return res.render("profile", {
+    title: "profile | page",
+  });
+};
 
 module.exports.signUp = function (req, res) {
+  if (req.isAuthenticated()) {
+    return res.redirect("/users/profile");
+  }
   return res.render("sign-up", {
     title: "Codieal | sign up",
   });
 };
 
 module.exports.signIn = function (req, res) {
+  if (req.isAuthenticated()) {
+    return res.redirect("/users/profile");
+  }
   return res.render("sign-in", {
     title: "Codieal | sing in",
   });
@@ -43,4 +49,13 @@ module.exports.create = function (req, res) {
 
 module.exports.createSession = function (req, res) {
   return res.redirect("/");
+};
+
+module.exports.destorySession = function (req, res) {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    return res.redirect("/users/sign-in");
+  });
 };

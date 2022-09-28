@@ -1,0 +1,6 @@
+body {
+  background-color: ghostwhite;
+  margin: 0;
+  height: 100vh; }
+  body #layout-main {
+    height: 100%; }

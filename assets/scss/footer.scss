@@ -1,0 +1,22 @@
+footer{
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 20px;
+    h1{
+        color: white;
+    }
+    a{
+        text-decoration: none;
+            color: white;
+            font-size: 20px;
+            text-transform: capitalize;
+    }
+    .footer-container{
+        display: flex;
+        width: 150px;
+        justify-content:space-between;
+        align-items: center;
+    }
+}
